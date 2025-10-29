@@ -36,8 +36,11 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
 
-    implementation(project(":features:exemple:ui"))
-    implementation(project(":features:exemple:api"))
+    implementation(project(":features:agents:ui"))
+    implementation(project(":features:agents:api"))
+    implementation(project(":features:maps:ui"))
+    implementation(project(":features:maps:api"))
+    implementation(project(":core:data"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -47,6 +50,10 @@ dependencies {
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.bundles.koin)
 
+    // Dépendences pour la navigation
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.compose.navigation)
+    implementation(libs.androidx.navigation.compose)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

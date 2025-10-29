@@ -6,6 +6,17 @@ lifecycleRuntimeKtx = "2.9.4"
 activityCompose = "1.11.0"
 composeBom = "2024.09.00"
 koin-bom = "4.1.1"
+navigationRuntimeKtx = "2.9.5"
+composeNavigation = "1.5.4"
+ktor = "2.3.12"
+navigationCompose = "2.9.5"
+phosphorIconVersion = "1.0.0"
+# Pour jouer le son
+annotationJvm = "1.9.0"
+# Version de room : base de données en local
+roomKtx = "2.7.2"
+# Version pour ksp (compiler pour room)
+ksp = "2.0.21-1.0.26"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -17,18 +28,42 @@ androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graph
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+# Library pour room : base de données locale
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomKtx" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomKtx" }
+# Library pour des icones Phosphor
+adamglin-phosphor-icon = { module = "com.adamglin:phosphor-icon", version.ref = "phosphorIconVersion" }
 
 # Koin
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-core    = { module = "io.insert-koin:koin-core"}
 koin-android = { module = "io.insert-koin:koin-android"}
-koin-compose = { module = "io.insert-koin:koin-compose"}
+koin-compose = { module = "io.insert-koin:koin-androidx-compose"}
+
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+androidx-compose-navigation = { group = "androidx.wear.compose", name = "compose-navigation", version.ref = "composeNavigation" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+# Ktor Client
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-gson = { group = "io.ktor", name = "ktor-serialization-gson", version.ref = "ktor" }
+
+# Pour jouer le son
+androidx-annotation-jvm = { group = "androidx.annotation", name = "annotation-jvm", version.ref = "annotationJvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+# Plugin pour ksp (compiler room)
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
 
 [bundles]
 compose-ui = [
@@ -38,9 +73,24 @@ compose-ui = [
     "androidx-compose-material3",
 ]
 
+phosphor = [
+    "adamglin-phosphor-icon"
+]
+
+room = [
+    "androidx-room-ktx",
+    "androidx-room-runtime"
+]
+
 koin = [
     "koin-core",
     "koin-android",
     "koin-compose"
 ]
 
+ktor = [
+    "ktor-client-android",
+    "ktor-client-logging",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-gson"
+]

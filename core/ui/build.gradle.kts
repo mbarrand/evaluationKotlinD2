@@ -32,6 +32,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(libs.bundles.compose.ui)
+    implementation(libs.androidx.navigation.runtime.ktx)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

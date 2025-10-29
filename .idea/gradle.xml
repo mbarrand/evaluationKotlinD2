@@ -14,13 +14,19 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/domain" />
+            <option value="$PROJECT_DIR$/core/system" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/exemple" />
-            <option value="$PROJECT_DIR$/features/exemple/api" />
-            <option value="$PROJECT_DIR$/features/exemple/data" />
-            <option value="$PROJECT_DIR$/features/exemple/domain" />
-            <option value="$PROJECT_DIR$/features/exemple/ui" />
+            <option value="$PROJECT_DIR$/features/agents" />
+            <option value="$PROJECT_DIR$/features/agents/api" />
+            <option value="$PROJECT_DIR$/features/agents/data" />
+            <option value="$PROJECT_DIR$/features/agents/domain" />
+            <option value="$PROJECT_DIR$/features/agents/ui" />
+            <option value="$PROJECT_DIR$/features/maps" />
+            <option value="$PROJECT_DIR$/features/maps/api" />
+            <option value="$PROJECT_DIR$/features/maps/data" />
+            <option value="$PROJECT_DIR$/features/maps/domain" />
+            <option value="$PROJECT_DIR$/features/maps/ui" />
           </set>
         </option>
       </GradleProjectSettings>

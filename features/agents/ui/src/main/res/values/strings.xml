@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EvaluationP1</string>
+    <string name="toast_cached_data">Données en cache (Room)</string>
+    <string name="title_agents">Agents VALORANT</string>
+    <string name="cd_speaker">Speaker</string>
+</resources>
